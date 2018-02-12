@@ -1,0 +1,414 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #545454
+}
+
+html, body {
+  height: 100%;
+  background: #eef4fc;
+}
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, figure, p, pre {
+  margin: 0
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0
+}
+
+iframe {
+  border: 0
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+}
+
+#app, .ivu-layout, .ivu-menu, .wrapper {
+  height: 100%;
+}
+
+.layout {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  z-index: 109;
+}
+
+.main {
+  overflow: auto;
+}
+
+.padding {
+  padding: 20px;
+}
+
+.panel {
+  background: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.panel-header {
+  padding: 20px;
+  position: relative;
+}
+
+.panel-header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(241,241,241,1);
+  margin: 0 20px;
+}
+
+.panel-body {
+  padding: 20px;
+}
+
+.panel-footer {
+  padding: 0 20px 50px 20px;
+}
+
+.TvT {
+  padding: 15px 20px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 25px;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 15px;
+  color: rgba(74,74,74,1);
+}
+
+.btn-default {
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.01);
+  background: #fff;
+  border: 1px solid rgba(231,231,231,1);
+}
+
+.btn-default:hover {
+  color: rgba(149,176,252,1);
+  border: 1px solid rgba(149,176,252,1);
+}
+
+.btn-default:active {
+  color: rgba(43,96,242,1);
+  border: 1px solid rgba(43,96,242,1);
+}
+
+.btn-primary {
+  box-shadow: 0px 0px 20px rgba(43,96,242,0.2);
+  background: rgba(43,96,242,1);
+  color: #fff;
+}
+
+.btn-danger {
+  box-shadow: 0px 0px 20px rgba(255,109,71,0.2);
+  background: rgba(255,109,71,1);
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background:rgba(255,128,95,1);
+  color: #fff;
+}
+
+.ivu-breadcrumb {
+  display: flex;
+  align-items: center;
+}
+
+.ivu-breadcrumb-item-link {
+  font-size: 14px;
+  color: rgba(74,74,74,1);
+}
+
+.ivu-menu-vertical .ivu-menu-item, .ivu-menu-vertical .ivu-menu-submenu-title {
+  margin: 0px 10px;
+}
+
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+  background: rgba(43,96,242,1);
+  border-radius: 40px;
+  color: #fff;
+  padding: 9px 20px;
+  box-shadow: 0px 0px 30px rgba(43,96,242,0.3);
+}
+
+.ivu-input, .ivu-select-single .ivu-select-selection {
+  background:rgba(247,249,255,1);
+  border-radius: 36px;
+  height: 36px;
+}
+
+.ivu-label {
+  margin-right: 30px;
+}
+
+.between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.flex {
+  display: flex;
+}
+
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item a {
+  color: #495060;
+}
+
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) a {
+  color: #fff;
+}
+
+.select-info li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.hide {
+  display: none!important;
+}
+
+.quill-editor:not(.bubble) .ql-container,.quill-editor:not(.bubble) .ql-container .ql-editor {
+  height: 200px;
+}
+
+.ql-snow .ql-picker {
+  height: auto!important;
+}
+
+.ivu-select-single .ivu-select-selection .ivu-select-placeholder, .ivu-select-single .ivu-select-selection .ivu-select-selected-value {
+  height: 36px;
+  line-height: 35px;
+}
+
+tbody .btn {
+  line-height: 1;
+  padding: 4px 8px 3px;
+}
+
+tbody .btn-primary {
+  color: rgba(84,114,199,1);
+  background: rgba(231, 237, 255, 1);
+  border-color: rgba(231, 237, 255, 1);
+  border-radius: 18px;
+  box-shadow: none;
+}
+
+tbody .btn-primary:hover {
+  color: rgba(42, 87, 214,1);
+  background: rgba(187, 204, 255, 1);
+  border-color: rgba(187, 204, 255, 1);
+}
+
+tbody .btn-danger {
+    box-shadow: none;
+    background: rgba(253,220,210,1);
+    border-color: rgba(253,220,210,1);
+    color: rgba(255,61,40,1);
+    border-radius: 18px;
+}
+
+tbody .btn-danger:hover {
+    background: rgba(253,188,168,1);
+    border-color: rgba(253,188,168,1);
+    color: rgba(255,37,13,1);
+}
+
+.ivu-menu-submenu .ivu-menu-item {
+  font-size: 12px;
+}
+
+.ivu-poptip-confirm .ivu-poptip-popper {
+  width: 190px;
+}
+
+.ivu-poptip-confirm .ivu-poptip-footer {
+  text-align: center;
+}
+
+.ivu-btn-primary {
+  box-shadow: 0px 0px 20px rgba(43,96,242,0.2);
+  background: rgba(43,96,242,1);
+  color: #fff;
+  padding: 3px 12px;
+  font-size: 12px;
+  border-radius: 15px;
+}
+
+.ivu-btn-text {
+  -webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.01);
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.01);
+  background: #fff;
+  border: 1px solid rgba(231,231,231,1);
+  padding: 3px 12px;
+  font-size: 12px;
+  border-radius: 15px;
+}
+
+.ivu-btn-text:hover {
+  background:rgba(249,250,255,1);
+  border: 1px solid #BBCDFF;
+  color: #95B0FC;
+}
+
+.ivu-modal-confirm-footer {
+  text-align: center;
+}
+
+.ivu-modal-confirm-footer .ivu-btn {
+  font-size: 12px;
+  padding: 6px 25px;
+}
+
+.ivu-modal-confirm-footer button+button {
+  margin-left: 30px;
+}
+
+.ivu-form-item {
+  margin-bottom: 30px;
+}
+
+.ivu-modal-body {
+  padding: 42px 60px 40px 30px;
+}
+
+.ivu-modal-confirm {
+  padding: 0;
+}
+
+.ivu-menu-vertical.ivu-menu-light:after {
+  background: #E9E9E9;
+}
+
+.pb-50 {
+  padding-bottom: 50px;
+}
+
+.tooltip-box {
+  position: relative;
+}
+
+.tooltip-box .help {
+  font-size: 12px;
+  position: absolute;
+  left: 110px;
+  top: 0px;
+  font-style: normal;
+  color: #F5D67C;
+}
+
+.ql-toolbar.ql-snow .ql-formats {
+  margin-right: 12px!important;
+}
+
+.ivu-form {
+  position: relative;
+}
+
+.btn-close-modal {
+  position: absolute;
+  right: -45px;
+  top: -45px;
+  color: #C1C1C1;
+}
+
+.btn-close-modal .ivu-icon {
+  font-size: 14px;
+}
+
+.ql-editor {
+  white-space: normal!important;
+}
+
+.edui-default .edui-editor-toolbarboxouter, .edui-default .edui-editor-toolbarbox {
+  background: #fff!important;
+  background-image: none!important;
+  box-shadow: none!important;
+}
+
+.edui-default .edui-button-body, .edui-splitbutton-body, .edui-menubutton-body, .edui-combox-body {
+  height: 22px;
+}
+
+.edui-default .edui-toolbar .edui-button, .edui-default .edui-toolbar .edui-splitbutton, .edui-default .edui-toolbar .edui-menubutton, .edui-default .edui-toolbar .edui-combox {
+  height: 22px;
+}
+
+.edui-default .edui-toolbar .edui-combox .edui-combox-body {
+  line-height: 20px;
+}
+
+.edui-default .edui-popup-content {
+  box-shadow: none!important;
+  border-radius: 4px;
+}
+
+.video-name {
+  font-size: 12px;
+  font-style: normal;
+}
+
+.video-name .ivu-icon {
+  margin-right: 5px;
+}
